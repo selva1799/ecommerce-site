@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('status')->default('pending');
             $table->json('payment_details')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -12,6 +12,8 @@ use Filament\Support\Colors\Color;
 
 class AdminPanelProvider extends PanelProvider
 {
+    protected static ?int $navigationSort = 1;
+
     public function panel(Panel $panel): Panel
     {
         return $panel

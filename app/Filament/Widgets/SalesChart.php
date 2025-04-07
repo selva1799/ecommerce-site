@@ -8,6 +8,8 @@ class SalesChart extends ChartWidget
 {
     protected static ?string $heading = 'Last 6 Months Sales';
 
+    protected static ?int $sort = 2;
+
     protected function getData(): array
     {
         return [
@@ -26,5 +28,16 @@ class SalesChart extends ChartWidget
     protected function getType(): string
     {
         return 'line';
+    }
+
+    protected function getOptions(): array
+    {
+        return [
+            'scales' => [
+                'y' => [
+                    'beginAtZero' => true,
+                ],
+            ],
+        ];
     }
 }

@@ -49,4 +49,21 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isAdmin(): bool
+    {
+        return $this->role_id === 1;
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function delete()
+    {
+        // Perform any pre-deletion logic here if needed
+
+        return parent::delete();
+    }
 }

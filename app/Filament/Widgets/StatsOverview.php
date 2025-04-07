@@ -27,4 +27,9 @@ class StatsOverview extends BaseWidget
                 ->color('primary'),
         ];
     }
+
+    protected function getColumns(): int
+    {
+        return 4;
+    }
 }

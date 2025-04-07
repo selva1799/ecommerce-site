@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('publishable_key')->nullable();
             $table->string('secret_key')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

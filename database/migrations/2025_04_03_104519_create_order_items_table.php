@@ -18,6 +18,7 @@ return new class extends Migration
             $table->json('shipping_address')->nullable();
             $table->text('customer_note')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
